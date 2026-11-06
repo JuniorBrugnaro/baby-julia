@@ -1,0 +1,14 @@
+{
+  "name": "cha-de-bebe-julia",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "build": "node build-css.cjs",
+    "start": "node scripts/serve.cjs",
+    "dev": "node scripts/serve.cjs"
+  },
+  "devDependencies": {
+    "postcss": "8.5.6",
+    "tailwindcss": "3.4.17"
+  }
+}
