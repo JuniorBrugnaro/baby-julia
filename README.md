@@ -33,6 +33,7 @@ Alternativa: com a extensão Live Server instalada no VS Code, abra `dist/index.
 | `tailwind.config.cjs` | Paleta, fontes e configuração das classes Tailwind |
 | `build-css.cjs` | Geração do arquivo `dist/tailwind.css` |
 | `scripts/serve.cjs` | Servidor para desenvolvimento local |
+| `netlify.toml` | Publicação da pasta `dist/` na Netlify |
 | `.openai/hosting.json` | Configuração original da hospedagem Sites |
 
 ## Alterar as classes do Tailwind
@@ -53,8 +54,15 @@ Para alterações visuais próprias, prefira `dist/estilo.css`. O arquivo `dist/
 - HTML, CSS, JavaScript, fotos, ícones e calendário estão incluídos no pacote. As fontes do Google e o mapa incorporado utilizam internet; sem conexão, o navegador usa fontes alternativas e o mapa pode não carregar.
 - O site é estático: não depende de banco de dados ou servidor de aplicação. Os recursos interativos rodam no navegador.
 - Ao mudar a data ou o endereço, atualize também `dist/encontro.ics`, a contagem em `dist/convite.js` e os links do mapa em `dist/index.html`.
-- As edições locais não atualizam automaticamente o site publicado. Para publicar em uma hospedagem estática, envie o conteúdo de `dist/` após concluir as alterações.
-- A pasta não inclui credenciais, histórico Git ou `node_modules`. Os arquivos de configuração e dependências necessários estão incluídos.
+- As edições locais só chegam ao site publicado depois de um commit e push para a branch `main` no GitHub.
+- A pasta não inclui credenciais ou `node_modules`. Os arquivos de configuração e dependências necessários estão incluídos.
+
+## Publicação
+
+- GitHub: https://github.com/JuniorBrugnaro/baby-julia
+- Site: https://cha-de-bebe-julia-2026.netlify.app/
+
+A Netlify está conectada à branch `main` e publica `dist/` conforme `netlify.toml`. Após enviar uma alteração ao GitHub, acompanhe o novo deploy no painel da Netlify.
 
 ## Origem
 
